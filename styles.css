@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #00ffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00ffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+/* Sección General */
+section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #00ffff;
+    margin: 0.5rem auto 0;
+    border-radius: 10px;
+}
+
+/* Productos */
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(145deg, #151515, #1f1f1f);
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2), 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    object-fit: cover;
+}
+
+.product-details h3 {
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.product-details p {
+    font-size: 1rem;
+    color: #bbbbbb;
+    margin-bottom: 1.5rem;
+}
+
+.product-details button {
+    background: #00ffff;
+    color: #0d0d0d;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+.product-details button:hover {
+    background: #00b3b3;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Carrito */
+table {
+    width: 100%;
+    margin-top: 2rem;
+    background: rgba(20, 20, 20, 0.95);
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+table th {
+    background: #00ffff;
+    color: #0d0d0d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cart-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-actions button {
+    background: #00ffff;
+    color: #0d0d0d;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-actions button:hover {
+    background: #00b3b3;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Formulario de pago */
+form {
+    background: linear-gradient(145deg, #151515, #1f1f1f);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #0d0d0d;
+    color: #e0e0e0;
+}
+
+form button {
+    background: #00ffff;
+    color: #0d0d0d;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #00b3b3;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
